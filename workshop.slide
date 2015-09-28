@@ -119,7 +119,7 @@ Most other languages rely on 3rd party libraries to do these well.
 ################################################################################
 * What does it look like?
 
-Further Text, including invocations like:
+Sample Go snippet
 
 .play code/syntax.go
 
