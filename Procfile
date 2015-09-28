@@ -1,1 +1,1 @@
-web: exec bin/present -http="0.0.0.0:$PORT" -play="$PLAY"
+web: exec bin/present.a -http="0.0.0.0:$PORT" -play="$PLAY"
