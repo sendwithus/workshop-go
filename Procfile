@@ -1,1 +1,1 @@
-web: present intro.slide
+web: ./bin/present intro.slide
