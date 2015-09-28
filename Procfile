@@ -1,1 +1,1 @@
-web: ./bin/present intro.slide
+web: present -http="0.0.0.0:$PORT" -play=$PLAY
