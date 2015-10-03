@@ -1,0 +1,199 @@
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
+# UVic Startup Slam Workshop Talk – 90 Minutes #
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
+
+Wake Me Up, Before you Golang
+2 Oct 2015
+Tags: golang, workshop, uvic, sendwithus
+
+Gregory Schier
+Principal Engineer
+greg@sendwithus.com
+@GregorySchier
+http://schier.co/
+
+Matt Harris
+Cofounder, CEO
+matt@sendwithus.com
+@mrmch
+
+
+################################################################################
+* Schedule
+
+*1.*Intro*to*Go* _15_mins_
+
+*2.*How*Sendwithus*Uses*Go* _15_mins_
+
+*3.*Basic*Examples* _30_mins_
+
+*4.*Larger*Example* TBD _30_mins_
+
+
+################################################################################
+* Intro to Go (15 mins)
+
+
+################################################################################
+* What is Go?
+
+- open source programming language
+- started by Google in 2007
+- reached v1.0 in March 2012
+
+.image img/gopher.png _ 350
+.caption _Gopher_ by [[http://www.reneefrench.com][Renée French]]
+
+
+################################################################################
+* Why was it created?
+
+No new major systems langauges in over a decade
+
+But much has changed:
+
+- huge *dependency*graphs*
+- dominance of *networking*
+- client/server *communication* focus
+- massive *clusters*
+- *multi-core* everywhere
+
+Languages designed 10 years ago did not have these factors in mind.
+
+
+################################################################################
+* What is it used for?
+
+Go is a general purpose language, like Python, C, or Java.
+
+Some common uses:
+
+- Server daemons
+- Command-line tools
+- Web applications
+- Games
+- Scientific computing
+- High frequency trading
+
+
+################################################################################
+* Who uses it?
+
+- Google
+- Facebook
+- Dropbox
+- Twitter
+- Heroku
+- Soundcloud
+- Sendgrid
+- Mailgun
+- Sendwithus
+
+Everyone is jumping on board!
+
+
+################################################################################
+* What does Go include?
+
+Go includes packages for many common tasks
+
+- web server
+- templating
+- http client
+- testing
+- concurrency tools
+
+Most other languages rely on 3rd party libraries to do these well.
+
+
+################################################################################
+* But what IS Go?
+
+- compiled language
+- C-like syntax
+- garbage collection
+- type safety
+- concurrency built in
+
+
+################################################################################
+* What does it look like?
+
+Sample Go snippet
+
+.play code/syntax.go
+
+
+################################################################################
+* How Sendwithus Uses Go (15 mins)
+
+
+################################################################################
+* What is Sendwithus?
+
+Email automation for product teams and developers
+
+- web dashboard to manage templates
+- REST API to trigger emails
+
+.code code/send.sh
+
+
+################################################################################
+* Basic Examples (30 mins)
+
+
+################################################################################
+* Go Playground
+
+Visit [[http://play.golang.org]] in your browser
+
+- execute *real* Go code
+- no software required
+
+Each example with link to a playground to help you follow along
+
+
+################################################################################
+* Hello World!
+
+.play code/hello.go
+
+
+################################################################################
+* Variables
+
+.play code/vars.go /^func main/,/^}/
+
+
+################################################################################
+* Types
+
+Golang is a simple language and has very few types
+
+- integer, float
+- boolean
+- string
+- array, slice
+- map
+- struct
+- pointer
+- function
+- interface
+- channel
+
+
+################################################################################
+* Why Go?
+
+Python too slow.
+
+
+################################################################################
+* Snippet
+
+.play code/hello.go /^func main/,/^}/
+
+
+################################################################################
+* Larger Example (30 mins)
