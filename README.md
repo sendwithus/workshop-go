@@ -1,14 +1,4 @@
-Workshop Go
-===========
+Sendwithus Go Workshop
+======================
 
-Here's what to do:
-
-```bash
-# Get the `present` binary
-go get golang.org/x/tools/present
-
-# Run the presentation
-present
-```
-
-
+Import this into [Cloud 9](https://c9.io)
