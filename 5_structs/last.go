@@ -15,5 +15,5 @@ func main() {
         Price: 1000,
     }
 
-    fmt.Printf("%+v\n", computer)
+    fmt.Println(computer)
 }
