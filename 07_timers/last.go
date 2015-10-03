@@ -17,7 +17,9 @@ func (c *Computer) Describe() {
 
 func (c *Computer) StartTimer(t time.Duration) {
     fmt.Println("Starting timer...")
+    
     time.Sleep(t)
+    
     fmt.Println("Time up!")
 }
 
@@ -29,13 +31,5 @@ func main() {
     }
     
     t := 3 * time.Second
-    
-    // TODO: Spawn this function in a goroutine
     computer.StartTimer(t)
-
-    computer.Describe()
-    
-    // IGNORE THIS:
-    // This is a hack, so the program doesn't quit before the goroutine finishes
-    time.Sleep(10 * time.Second)
 }

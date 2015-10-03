@@ -15,11 +15,10 @@ func (c *Computer) Describe() {
     fmt.Printf("%s %s $%d\n", c.Brand, c.Model, c.Price)
 }
 
-func (c *Computer) StartTimer(channel chan string, t time.Duration) {
+func (c *Computer) StartTimer(t time.Duration) {
     fmt.Println("Starting timer...")
     time.Sleep(t)
-    
-    // TODO: Push the "Time up!" message to the channel
+    fmt.Println("Time up!")
 }
 
 func main() {
@@ -29,14 +28,10 @@ func main() {
         Price: 1000,
     }
     
-    channel := make(chan bool)
-    
     t := 3 * time.Second
-    go computer.StartTimer(channel, t)
-
-    computer.Describe()
+    go computer.StartTimer(t)
     
-    // Use "select" to listen to the channel and print the message
-    
-    fmt.Println("Exited")
+    // IGNORE THIS:
+    // This is a hack, so the program doesn't quit before the goroutine finishes
+    time.Sleep(10 * time.Second)
 }

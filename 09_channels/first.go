@@ -15,12 +15,11 @@ func (c *Computer) Describe() {
     fmt.Printf("%s %s $%d\n", c.Brand, c.Model, c.Price)
 }
 
-func (c *Computer) StartTimer(t time.Duration) {
+func (c *Computer) StartTimer(channel chan string, t time.Duration) {
     fmt.Println("Starting timer...")
-    
     time.Sleep(t)
     
-    fmt.Println("Time up!")
+    // TODO: Push the "Time up!" string to the channel
 }
 
 func main() {
@@ -30,8 +29,12 @@ func main() {
         Price: 1000,
     }
     
+    channel := make(chan bool)
+    
     t := 3 * time.Second
-    computer.StartTimer(t)
-
-    computer.Describe()
+    go computer.StartTimer(channel, t)
+    
+    // Use "select" to listen to the channel and print the string
+    
+    fmt.Println("Exited")
 }

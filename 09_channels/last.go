@@ -15,9 +15,11 @@ func (c *Computer) Describe() {
     fmt.Printf("%s %s $%d\n", c.Brand, c.Model, c.Price)
 }
 
-// TODO: Make a StartTimer function that...
-//  - Sleeps for a given duration
-//  - Prints a message when done
+func (c *Computer) StartTimer(channel chan string, t time.Duration) {
+    fmt.Println("Starting timer...")
+    time.Sleep(t)
+    channel <- "Time up!"
+}
 
 func main() {
     computer := Computer{
@@ -26,8 +28,15 @@ func main() {
         Price: 1000,
     }
     
+    channel := make(chan bool)
+    
     t := 3 * time.Second
-    computer.StartTimer(t)
-
-    computer.Describe()
+    go computer.StartTimer(channel, t)
+    
+    select {
+        case msg := <-channel:
+            fmt.Println(msg)
+    }
+    
+    fmt.Println("Exited")
 }

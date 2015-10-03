@@ -15,11 +15,9 @@ func (c *Computer) Describe() {
     fmt.Printf("%s %s $%d\n", c.Brand, c.Model, c.Price)
 }
 
-func (c *Computer) StartTimer(t time.Duration) {
-    fmt.Println("Starting timer...")
-    time.Sleep(t)
-    fmt.Println("Time up!")
-}
+// TODO: Make a StartTimer function that...
+//  - Sleeps for a given duration
+//  - Prints a message when done
 
 func main() {
     computer := Computer{
@@ -29,11 +27,5 @@ func main() {
     }
     
     t := 3 * time.Second
-    go computer.StartTimer(t)
-
-    computer.Describe()
-    
-    // IGNORE THIS:
-    // This is a hack, so the program doesn't quit before the goroutine finishes
-    time.Sleep(10 * time.Second)
+    computer.StartTimer(t)
 }

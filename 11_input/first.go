@@ -47,8 +47,6 @@ func main() {
     
     t := time.Duration(seconds) * time.Second
     go computer.StartInterval(channel, t)
-
-    computer.Describe()
     
     for msg := range channel {
         fmt.Println(msg)
