@@ -29,7 +29,7 @@ func main() {
         Price: 1000,
     }
     
-    channel := make(chan bool)
+    channel := make(chan string)
     
     t := 3 * time.Second
     go computer.StartTimer(channel, t)
